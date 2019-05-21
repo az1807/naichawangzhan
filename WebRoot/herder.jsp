@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+<%@ page language="java" import="java.util.*,com.naicha.entity.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh-cn">
 <head>
     <title>某某家具设计公司企业官网-模板之家</title>
@@ -33,8 +39,19 @@
         <div class="width-center">
             <div class="header-logo "><img src="images/logo.png" alt=""></div>
             <div class="header-title div-inline">
-                <strong>某某家具设计公司</strong>
-                <span>www.cssmoban.com</span>
+                <strong>
+                <%
+               Company gongsi =  (Company)request.getAttribute("company");
+                 %>
+                 
+                 <%=gongsi.getName() %>
+                
+                </strong>
+                <span><%
+               Company gonsi =  (Company)request.getAttribute("company");
+                 %>
+                 
+                 <%=gonsi.getWangzhi() %></span>
             </div>
 
             <div class="search-box div-inline">
@@ -67,80 +84,6 @@
     </div>
 
 </header>
-<div class="am-slider am-slider-default" data-am-flexslider="{playAfterPaused: 8000}">
-    <ul class="am-slides">
-        <li><img src="images/banner.jpg" alt="" ></li>
-        <li><img src="images/banner.jpg" alt="" ></li>
-        <li><img src="images/banner.jpg" alt="" ></li>
-        <li><img src="images/banner.jpg" alt="" ></li>
-    </ul>
-</div>
-<div>
-    <header class="header-article-list">
-        <h1>在线留言</h1>
 
-    </header>
-<div>
-   <form class="message-form" method="post" >
-
-       <label>姓名
-           <input type="text" name="username">
-           <span>*</span>
-       </label>
-
-
-       <label>电话
-           <input type="text" name="tel">
-           <span>*</span>
-       </label>
-
-
-       <label>邮箱
-           <input type="email" name="email">
-           <span>*</span>
-       </label>
-
-
-       <label>内容
-           <textarea></textarea>
-           <span>*</span>
-       </label>
-
-
-       <button type="button" class="am-btn am-btn-danger">提交</button>
-   </form>
-</div>
-</div>
-﻿<footer>
-    <div>
-        <div class="footer-info">
-            <div class="footer-content">
-                <img src="images/qccode.png" alt="">
-               <div>
-                <p>招商热线:0714-8868331</p>
-                <div class="footer-box">
-                    <i class="icon-tel"></i>
-                    <span>公司电话:</span>
-                    <span>0714-8868331</span>
-                </div>
-                <div class="footer-box">
-                    <i class="icon-email"></i>
-                    <span>公司邮箱:</span>
-                    <span>123@dayeyunalading.com</span>
-                </div>
-                <div class="footer-box">
-                    <i class="icon-address"></i>
-                    <span>公司地址:</span>
-                    <span>湖北省XXX市XXX大道小区B栋201</span>
-                </div>
-               </div>
-            </div>
-        </div>
-        <style>
-        .footer-bottom a{color:#F1404B}
-        </style>
-        <div class="footer-bottom"><div style="text-align:center;color:#fff;line-height:100px;"><span><a href="http://www.haothemes.com/" target="_blank" title="好主题">好主题</a>提供 - More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></span></div></div>
-    </div>
-</footer>
 </body>
 </html>

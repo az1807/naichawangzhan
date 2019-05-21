@@ -1,21 +1,14 @@
 package com.naicha.entity;
 
-public class Company {
+public class Foot {
 	//1
 	private int id ;
 	private String name;
 	private String phone;
-	private String address;
 	private String email;
+	private String address;
 	private String cultrue;
 	private String introductinon;
-	private String wangzhi;
-	public String getWangzhi() {
-		return wangzhi;
-	}
-	public void setWangzhi(String wangzhi) {
-		this.wangzhi = wangzhi;
-	}
 	//2
 	public int getId() {
 		return id;
@@ -61,27 +54,26 @@ public class Company {
 	}
 	
 	//3
-	public Company() {
+	public Foot() {
 	
 	}
-	public Company(int id, String name, String phone, String address,
-			String email, String cultrue, String introductinon,String wangzhi) {
+	public Foot(int id, String name, String phone, String address,
+			String email, String cultrue, String introductinon) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.phone = phone;
-		this.address = address;
 		this.email = email;
+		this.address = address;
 		this.cultrue = cultrue;
 		this.introductinon = introductinon;
-		this.wangzhi=wangzhi;
 	}
 	//4
 	@Override
 	public String toString() {
 		return "Company [id=" + id + ", name=" + name + ", phone=" + phone
 				+ ", address=" + address + ", email=" + email + ", cultrue="
-				+ cultrue + ", introductinon=" + introductinon + ",wangzhi="+wangzhi+"]";
+				+ cultrue + ", introductinon=" + introductinon + "]";
 	}
 	
 	
